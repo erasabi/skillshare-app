@@ -1,0 +1,10 @@
+{
+    // prettier format settings
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    // code actions on save
+    "editor.codeActionsOnSave": {
+        // removes unused imports
+        // "source.organizeImports": true
+    },
+}

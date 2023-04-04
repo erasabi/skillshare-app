@@ -1,0 +1,40 @@
+version: "3.8"  # docker engine version
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: "${DB_USER}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+    ports: 
+      - '5432:5432'
+    volumes:
+      - server-db:/var/lib/postgresql/data
+
+  server:
+    build:
+      context: .
+      dockerfile: ./server/Dockerfile.development
+    environment:
+      DB_SCHEMA: "${DB_SCHEMA}"
+      DB_USER: "${DB_USER}"
+      DB_PASSWORD: "${DB_PASSWORD}"
+      DB_HOST: "${DB_HOST}"
+    depends_on:
+      - postgres
+    ports:
+      - '3000:3000'
+
+  client:
+    build:
+      context: .
+      dockerfile: ./client/Dockerfile.development
+    environment:
+      API_ENDPOINT: "${API_ENDPOINT}"
+    depends_on:
+      - server
+    ports:
+      - '8080:8080'
+
+volumes:
+  server-db: # named volumes can be managed easier using docker-compose

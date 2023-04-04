@@ -1,0 +1,15 @@
+# SERVER
+# in case docker's node version and the env that installed these modules differ 
+server/node_modules
+# in case docker's npm install does not get corrupted by another env's package-lock.json
+server/package-lock.json
+# prevents non-docker env files from being copied over
+server/*.env.*
+
+# CLIENT
+# in case docker's node version and the env that installed these modules differ 
+client/node_modules
+# in case docker's npm install does not get corrupted by another env's package-lock.json
+client/package-lock.json
+# prevents non-docker env files from being copied over
+client/*.env.*

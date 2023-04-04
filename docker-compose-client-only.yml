@@ -1,0 +1,11 @@
+version: "3.8"  # docker engine version
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: ./client/Dockerfile.development
+    environment:
+      API_ENDPOINT: "${API_ENDPOINT}"
+    ports:
+      - '8080:8080'

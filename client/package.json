@@ -1,0 +1,100 @@
+{
+	"name": "streama-support-portal",
+	"version": "1.0.0",
+	"description": "support portal for streama users",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack",
+		"format": "prettier --write .",
+		"start": "webpack serve --mode development --hot",
+		"start:prod": "webpack serve --mode none",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+		"lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/erasabi/streama-support-portal.git"
+	},
+	"author": "Elan Rasabi",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/erasabi/streama-support-portal/issues"
+	},
+	"homepage": "https://github.com/erasabi/streama-support-portal#readme",
+	"dependencies": {
+		"@reduxjs/toolkit": "^1.7.1",
+		"axios": "^0.21.4",
+		"bcryptjs": "^2.4.3",
+		"dateformat": "^5.0.3",
+		"dayjs": "^1.11.1",
+		"dotenv": "^10.0.0",
+		"node-polyfill-webpack-plugin": "^1.1.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-minimal-pie-chart": "^8.2.0",
+		"react-redux": "^7.2.6",
+		"react-router-dom": "^6.2.1",
+		"react-spinners": "^0.11.0",
+		"react-toastify": "^8.1.1",
+		"react-validation": "^3.0.7",
+		"styled-components": "^5.3.3",
+		"validator": "^13.7.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.18.13",
+		"@babel/eslint-parser": "^7.18.9",
+		"@babel/preset-env": "^7.14.1",
+		"@babel/preset-react": "^7.13.13",
+		"babel-loader": "^8.2.2",
+		"babel-plugin-styled-components": "^2.0.2",
+		"css-loader": "^5.2.4",
+		"eslint": "^7.32.0",
+		"eslint-loader": "^4.0.2",
+		"eslint-plugin-better-styled-components": "^1.1.2",
+		"eslint-plugin-react": "^7.23.2",
+		"html-loader": "^2.1.2",
+		"html-webpack-plugin": "^5.3.1",
+		"less": "^4.1.1",
+		"less-loader": "^8.1.1",
+		"prettier": "^2.6.2",
+		"redux-devtools-extension": "^2.13.9",
+		"style-loader": "^2.0.0",
+		"webpack": "^5.37.0",
+		"webpack-cli": "^4.7.0",
+		"webpack-dev-server": "^4.0.0"
+	},
+	"comments": {
+		"scripts": {
+			"test": "",
+			"build": "compiles project code into /dir directory",
+			"start": {
+				"webpack serve": "start app using webpack built-in server",
+				"--mode development": "run the webpack config for dev env",
+				"--open": "open the browser once the server is ready",
+				"--hot": "use hot reload"
+			}
+		},
+		"dependencies": {
+			"react": "react itself (library of references to the React API)",
+			"react-dom": "react renderer (injects functionality into those lib references and renders them to the DOM)"
+		},
+		"devDependencies": {
+			"@babel/core": "babel (used to transpile your ES6 and JSX into backward compatible code)",
+			"@babel/preset-env": "converts the latest JavaScript syntax",
+			"@babel/preset-react": "converts the JSX",
+			"@babel/eslint-parser": "parser for eslint to work with babel",
+			"babel-loader": "loads code to be transpiled",
+			"css-loader": "loads css files. interprets @import and url() like import/require() and will resolve them.",
+			"eslint": "linter",
+			"eslint-loader": "loads code to be linted",
+			"eslint-plugin-react": "plugin allowing lint to work with react code",
+			"html-loader": "loads project html",
+			"html-webpack-plugin": "generate the final index.html based on your existing template index.html",
+			"style-loader": "injects CSS into the DOM",
+			"webpack": "actual runs the webpack",
+			"webpack-cli": "lets you compile project from CLI",
+			"webpack-dev-server": "webpack built-in server"
+		}
+	}
+}

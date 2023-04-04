@@ -1,0 +1,7 @@
+node_modules/
+.vscode/
+README.md
+package-lock.json
+**/.DS_Store
+dist/
+public/

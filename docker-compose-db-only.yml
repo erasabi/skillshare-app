@@ -1,0 +1,15 @@
+version: "3.8"  # docker engine version
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: "${DB_USER}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+    ports: 
+      - '5432:5432'
+    volumes:
+      - server-db:/var/lib/postgresql/data
+
+volumes:
+  server-db: # named volumes can be managed easier using docker-compose

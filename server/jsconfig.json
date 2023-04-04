@@ -1,0 +1,12 @@
+// The presence of jsconfig.json file in a directory indicates that the directory is the root of a JavaScript Project. The jsconfig.json file specifies the root files and the options for the features provided by the JavaScript language service.
+
+{
+	"compilerOptions": {
+		// Base directory to resolve non-relative module names.
+		"baseUrl": "./src",
+		// enables type checking on JavaScript files.
+		"checkJs": true,
+		// Specifies which default library (lib.d.ts) to use. The values are "es3", "es5", "es6", "es2015", "es2016", "es2017", "es2018", "es2019", "es2020", "esnext".
+		"target": "es6"
+	}
+}

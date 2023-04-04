@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npm run start:dev",
+            "cwd": "${workspaceRoot}/server",
+            "name": "Run npm start",
+            "request": "launch",
+            "type": "node-terminal",
+            "envFile": "local.env",
+            "port": 8080,
+        },
+    ]
+}

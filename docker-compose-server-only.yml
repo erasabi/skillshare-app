@@ -1,0 +1,14 @@
+version: "3.8"  # docker engine version
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./server/Dockerfile.development
+    environment:
+      DB_SCHEMA: "${DB_SCHEMA}"
+      DB_USER: "${DB_USER}"
+      DB_PASSWORD: "${DB_PASSWORD}"
+      DB_HOST: "${DB_HOST}"
+    ports:
+      - '3000:3000'

@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		// specify absolute paths
+		// absolute paths must be specified in these config files (if used):
+		// 	1 webpack.config.js: so relative pathing isn't the only option when importing
+		// 	2 jsconfig.json: so IDE will not show error on valid paths
+		// 	3 eslintrc.js: so IDE will not show error when importing form index.js
+		"paths": {
+			"@src/*": ["./src/*"]
+		},
+		"checkJs": true,
+		"jsx": "react"
+	}
+}
