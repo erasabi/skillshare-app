@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    // Base directory to resolve non-relative module names
+    "baseUrl": ".",
+
+    // Specify module code generation method
+    // "commonjs" for Node.js/CommonJS style modules
+    "module": "commonjs",
+
+    // How to resolve modules
+    // "node" resolves modules like Node.js (looking in node_modules)
+    "moduleResolution": "node",
+
+    // ECMAScript target version
+    // "es6" compiles to ES2015 (ES6)
+    "target": "es6",
+
+    // Allow default imports from modules with no default export
+    // Adds better interop when importing CommonJS modules
+    "allowSyntheticDefaultImports": true,
+
+    // Similar to above, but emits additional JavaScript to ensure
+    // compatibility with CommonJS modules
+    "esModuleInterop": true,
+
+    // Allow importing .json files as modules
+    "resolveJsonModule": true,
+
+    // Support JSX in .tsx files
+    // "react" mode emits React.createElement
+    "jsx": "react",
+
+    // Allow JavaScript files to be compiled
+    "allowJs": true,
+
+    // Don't report errors in JavaScript files
+    "checkJs": false,
+
+    // Don't emit compiler output files like .js
+    // Typical for projects using Babel for compilation
+    "noEmit": true
+  },
+
+  // Files to exclude from compilation
+  "exclude": ["node_modules"],
+
+  // Files to include in compilation
+  // Looks for TypeScript and JavaScript files in all directories
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.js",
+    "./**/*.jsx"
+  ]
+}
